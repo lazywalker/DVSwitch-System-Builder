@@ -79,7 +79,7 @@ cd /srv/Repositories/G4KLX/P25Clients
 cp -rf P25Gateway P25Parrot P25Reflector /usr/src
 
 cd /srv/Repositories/G4KLX/YSFClients
-cp -rf YSFGateway YSFParrot /usr/src
+cp -rf YSFGateway YSFParrot YSFReflector /usr/src
 
 # cd /srv/Repositories/N0MJS
 # Flesh this out
@@ -129,6 +129,10 @@ make clean
 make
 cp YSFParrot /opt/YSFParrot
 
+cd /usr/src/YSFReflector
+make clean
+make
+cp YSFReflector /opt/YSFReflector
 
 # Enable the systemd unit files
 #
@@ -140,6 +144,7 @@ systemctl enable p25parrot.service
 systemctl enable p25reflector.service
 systemctl enable ysfgateway.service
 systemctl enable ysfparrot.service
+systemctl enable ysfreflector.service
 systemctl enable netcheck.service
 
 # Populate the datafiles
