@@ -40,7 +40,7 @@ cp -rf ./Directories/* /
 # The directories were installed from above
 
 cd /srv/Repositories/N4IRS
-git clone https://github.com/N4IRS/MMDVMHost-Dashboard.git
+git clone https://github.com/DVSwitch/MMDVMHost-Dashboard
 
 ## cd /srv/Repositories/DVSwitch
 
