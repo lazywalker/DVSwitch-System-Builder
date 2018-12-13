@@ -76,7 +76,7 @@ cd /srv/Repositories/G4KLX/NXDNClients
 cp -rf NXDNGateway NXDNParrot /usr/src
 
 cd /srv/Repositories/G4KLX/P25Clients
-cp -rf P25Gateway P25Parrot /usr/src
+cp -rf P25Gateway P25Parrot P25Reflector /usr/src
 
 cd /srv/Repositories/G4KLX/YSFClients
 cp -rf YSFGateway YSFParrot /usr/src
@@ -114,6 +114,11 @@ make clean
 make
 cp P25Parrot /opt/P25Parrot
 
+cd /usr/src/P25Reflector
+make clean
+make
+cp P25Reflector /opt/P25Reflector
+
 cd /usr/src/YSFGateway
 make clean
 make
@@ -132,6 +137,7 @@ systemctl enable nxdngateway.service
 systemctl enable nxdnparrot.service
 systemctl enable p25gateway.service
 systemctl enable p25parrot.service
+systemctl enable p25reflector.service
 systemctl enable ysfgateway.service
 systemctl enable ysfparrot.service
 systemctl enable netcheck.service
